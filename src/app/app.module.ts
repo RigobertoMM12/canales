@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+
+import 'core-js/features/array/includes'
+
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
@@ -15,13 +18,16 @@ import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { PlazoComponent } from './plazo/plazo.component';
 import { ProductosComponent } from './productos/productos.component';
 import { FormPlazoComponent } from './plazo/formulario/FormPlazoComponent';
-
+import { FormModificaComponent } from './productos/modificar/FormModifica.Component';
 import { PlazoService } from './plazo/plazo.service';
 import { ProductoService } from './productos/producto.service';
 import { UserService } from './header/UserService';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MyHeaderService } from './header/header.service';
+import { CotizacionesService } from './cotizaciones/cotizaciones.service';
+import { CcotizacionesComponent } from './ccotizaciones/ccotizaciones.component';
+
 
 FormPlazoComponent
 @NgModule({
@@ -33,7 +39,9 @@ FormPlazoComponent
     ProductosComponent,
     FooterComponent,
     HeaderComponent,
-    FormPlazoComponent
+    FormPlazoComponent,
+    FormModificaComponent,
+    CcotizacionesComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,7 @@ FormPlazoComponent
     NgxMaskModule,
     NgxPaginationModule,
   ],
-  providers: [PlazoService,ProductoService,UserService,MyHeaderService],
+  providers: [PlazoService,ProductoService,UserService,MyHeaderService,CotizacionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
