@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           this.usrActivo = usr;
           console.log("loadData()=> "+this.usrActivo);
           this.userService.setUserLoggedIn(this.usrActivo);
-          this.router.navigate(['productos']);
+          this.router.navigate(['']);
 
         }
 
